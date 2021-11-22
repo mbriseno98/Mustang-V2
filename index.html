@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author: Marcel Briseno
+    Class:   Web & Distributed Programming 
+    Project: Mustang Version 2
+    Session: su18-cpsc-24700-lt1
+    Description: Mustang V2 allows us to create and delete contacts and it has an auto complete forum for contact info
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Mustang Version 2</title>
+        <link rel="stylesheet" href="MustangV2.css">
+        <script src="MustangV2.js"></script>
+    </head>
+    <body onload="initApplication()">
+        <form autocomplete="off" onclick="showLookup()">
+            <div class="autocomplete">
+                <input id="myInput" type="search" placeholder="Search For a Contact" ><br><br>
+            </div>
+        </form>
+      
+        <h1 class="autocomplete">Mustang</h1>
+        <h2 class="autocomplete">2</h2>
+            <table class>
+                <div class = autocomplete>
+                    
+                    <input id="nameID" type="text" value="" size="20" placeholder="Name">
+
+                    <input id="emailID" type="text" value="" size="20"placeholder="Email">
+
+                    <input id="cityID" type="text" value="" size="20"placeholder="City">
+
+                    <input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()"placeholder="State">
+
+                    <input id="zipID" type="text" value="" size="20" onfocus="autoFill()" onblur="autoFill()"placeholder="Zip">
+
+                   
+
+                    <button type="button" autofocus onclick="next()">Next</button>
+                    <button type="button" onclick="previous()">Previous</button>
+                    <button type="button" onclick="addContact()">New</button>
+
+                    <button type="button" onclick="remove()">Delete</button>
+                    <p id="statusID"></p>
+                </div>
+              
+            </table>
+
+
+        <br><br><hr>
+        <p id=warning></p>
+       Stored Contacts:<pre id="contactsID"></pre>
+        
+
+        <script src="MustangV2.js"></script>
+    </body>
+</html>
